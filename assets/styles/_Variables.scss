@@ -1,0 +1,20 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//VARIABLES
+$colors:(
+    'blue': #675BD2,
+    'purpleLight': #A531D2,
+    'pink': #FD64AB,
+    'yellow': #FFBD00,
+    'green': #14EA84,
+    'cyan': #00B8FC,
+    'white': #FFFF,
+    'black': #000,
+    'grey': gainsboro
+
+);
+
+$font-family : 'Oswald';

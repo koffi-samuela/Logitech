@@ -1,0 +1,85 @@
+@use './Variables' as *;
+@use './mixins' as m;
+
+body{
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+//SECTION 1 HEADER ET NAV
+main{
+    height: 110vh;
+    background: url('../images/pexels-soumil-kumar-735911.jpg') center no-repeat ;
+    background-size: cover;
+    color: white;
+    border-image: linear-gradient(to right, 
+    map-get($map: $colors, $key: 'blue' ), 
+    map-get($map: $colors, $key: 'purpleLight' ), 
+    map-get($map: $colors, $key: 'pink' ), 
+    map-get($map: $colors, $key: 'yellow' ), 
+    map-get($map: $colors, $key: 'green' ), )1;
+    border-bottom-style: solid;
+    border-bottom-width: 20px;
+
+    .navbar{
+        @include m.dflex();
+        padding: 2vh 2vw;
+    
+        iconify-icon{
+            margin: 0 10px;
+        }
+    }
+    .navright{
+        @include m.dflex(row,space-between,center);
+    
+        iconify-icon{
+            margin: 0 10px;
+        }
+    }
+
+    .headText{
+        @include m.dflex(column,space-between,center);
+        position: relative;
+        top: 30vh;
+        text-align: center; 
+        
+        h1{
+            font-weight :450;
+            letter-spacing:4px;
+            margin: 2vh 0;
+
+            //span
+            .lightsync{
+                font-size: 75px;
+            }
+        }
+        p{
+            letter-spacing:1px;
+            font-size: 18px;
+            margin: 2vh 0;
+        }
+    }
+
+}
+
+footer {
+
+    @include m.dflex(row,space-between,top) ;
+    background-color: map-get($map: $colors, $key: 'grey' );
+    padding: 12vh 2vw;
+
+    .column3{
+    @include m.dflex() ;
+        iconify-icon {
+            margin: 0 10px;
+        }
+    }
+    .column2{
+        @include m.dflex(column) ;
+        width: 40%;
+    }
+}

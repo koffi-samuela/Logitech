@@ -1,0 +1,157 @@
+@use './Variables' as *;
+@use './mixins' as m;
+
+%Cartbutton{
+    @include m.dflex();
+    border: none;
+    background-color: map-get($map: $colors, $key:'cyan' );
+    color: map-get($map: $colors, $key: 'white' );
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    margin: 1vh 0;  
+}
+
+#information{
+    @include m.dflex(column,space-between,center );
+    background: url('../images/background\ rainbow.png') center no-repeat ;
+    background-size: cover;
+    // background-color: orangered;
+    padding: 10vh 0;
+
+    .info_title {
+        margin: 5vh 0;
+        // border-bottom: map-get($map: $colors, $key: 'black' ) solid;
+        // border-width: 8px;
+
+        h2{
+           text-transform: uppercase; 
+           font-size :40px;
+           padding: 2vh 0;
+        //    margin: 5vh 0;
+
+            }
+
+    }
+    .darkbarre{
+        width: 10%;
+        background-color: black;
+        height: 1vh;
+        margin-bottom: 3vh;
+    }
+    .info_texte{
+        text-align: center;
+        font-weight: light;
+    }
+    .logoRVB img{
+        width: 150px;
+        margin: 2vh 0;
+    //    background-color:gainsboro; 
+
+    }
+
+}
+
+#productGrid{
+    @include m.dgrid();
+    //DIV IMAGE
+    .img_product{
+        background-color: rgb(241, 241, 241);
+        position: relative;
+    }
+    .img_product .stock{
+        text-transform: uppercase;
+        position: absolute;
+        top: 2vh;
+        left: 1vw;
+        padding: 0.5vh 2vw;
+        background-color: black;
+        width: fit-content;
+        color: white;
+    }
+    .img_product img{
+        width: 300px;
+        height: 400px;
+        // height: auto;
+        object-fit: contain;
+        margin-left: 5vw;
+    }
+    margin: 6vh 4vw;
+    
+    .GridItem .productAlldescription{
+        background-color: map-get($map: $colors, $key: 'white' );
+    }
+}
+
+//classe info product
+.productAlldescription{
+    @include m.dflex(row,left,top);
+    align-content: left;
+
+
+        //Serie
+        
+        .productSerie p{
+            text-transform: uppercase;
+            margin-top: 4.5vh;
+            font-size: 11px;
+            font-weight: 475;
+            background-color: map-get($map: $colors, $key: 'grey' );
+            padding: 2px 12px; 
+            transform: rotate(-90deg);
+            white-space: nowrap;
+        
+        }
+
+        //information détaillées des produits
+        .productInformation {
+            margin-top: 1vh;
+            // width: 50%;
+            h3{
+                margin: 0.5vh 0;
+                font-size: 20px;
+                
+            }
+            P{
+                margin: 1vh 0;
+                font-weight :300;
+            }
+        }
+
+        //prix
+        .productPrice{
+        @include m.dflex(row,left,center);
+            gap: 20px;
+            .priceOverline{
+                text-decoration: line-through;
+                color: rgba(0, 0, 0, 0.471);
+            }
+        }
+        //choix de couleurs
+        .colorPicker{
+            width: 25%;
+            @include m.dflex(row,space-around center)
+        }
+
+        //reduction
+        .productReduction{
+            @include m.dflex(row,space,top);
+            // margin: 1.2vh 0;
+            padding: 1.5vh 0;
+            border-top: 1px solid rgb(194, 194, 194);
+
+            small{
+                font-size:12px;
+                margin: 0 2px
+                
+            }
+
+        }
+        // butonn add to cart
+        button {
+            @extend %Cartbutton;
+            
+            &:hover{
+                background-color:#00b9fca3;
+            }
+        }
+}

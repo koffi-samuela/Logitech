@@ -1,0 +1,10 @@
+
+@use './mixins' as m;
+@use './base' as b;
+@use './Layout.scss' as l;
+@use './components' as c;
+
+// sass --watch .\assets\styles\main.scss:.\assets\styles\style.css 
+// sass --watch .\assets\styles\main.scss:style.css  
+// sass --watch main.scss:style.css             
+// sass .\assets\styles\main.scss .\assets\css\style.css --watch                                                                                                                                                        

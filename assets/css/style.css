@@ -1,0 +1,276 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 110vh;
+  background: url("../images/pexels-soumil-kumar-735911.jpg") center no-repeat;
+  background-size: cover;
+  color: white;
+  border-image: linear-gradient(to right, #675BD2, #A531D2, #FD64AB, #FFBD00, #14EA84) 1;
+  border-bottom-style: solid;
+  border-bottom-width: 20px;
+}
+main .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 2vh 2vw;
+}
+main .navbar iconify-icon {
+  margin: 0 10px;
+}
+main .navright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+main .navright iconify-icon {
+  margin: 0 10px;
+}
+main .headText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  top: 30vh;
+  text-align: center;
+}
+main .headText h1 {
+  font-weight: 450;
+  letter-spacing: 4px;
+  margin: 2vh 0;
+}
+main .headText h1 .lightsync {
+  font-size: 75px;
+}
+main .headText p {
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 2vh 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  align-content: center;
+  background-color: gainsboro;
+  padding: 12vh 2vw;
+}
+footer .column3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+footer .column3 iconify-icon {
+  margin: 0 10px;
+}
+footer .column2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 40%;
+}
+
+.productAlldescription button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border: none;
+  background-color: #00B8FC;
+  color: white;
+  padding: 1vh 1vw;
+  border-radius: 5px;
+  margin: 1vh 0;
+}
+
+#information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background: url("../images/background rainbow.png") center no-repeat;
+  background-size: cover;
+  padding: 10vh 0;
+}
+#information .info_title {
+  margin: 5vh 0;
+}
+#information .info_title h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  padding: 2vh 0;
+}
+#information .darkbarre {
+  width: 10%;
+  background-color: black;
+  height: 1vh;
+  margin-bottom: 3vh;
+}
+#information .info_texte {
+  text-align: center;
+  font-weight: light;
+}
+#information .logoRVB img {
+  width: 150px;
+  margin: 2vh 0;
+}
+
+#productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px; /* Espacement entre les produits */
+  margin: 0 auto;
+  margin: 6vh 4vw;
+}
+#productGrid .img_product {
+  background-color: rgb(241, 241, 241);
+  position: relative;
+}
+#productGrid .img_product .stock {
+  text-transform: uppercase;
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+  padding: 0.5vh 2vw;
+  background-color: black;
+  width: fit-content;
+  color: white;
+}
+#productGrid .img_product img {
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
+  margin-left: 5vw;
+}
+#productGrid .GridItem .productAlldescription {
+  background-color: white;
+}
+
+.productAlldescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: top;
+  align-content: center;
+  align-content: left;
+}
+.productAlldescription .productSerie p {
+  text-transform: uppercase;
+  margin-top: 4.5vh;
+  font-size: 11px;
+  font-weight: 475;
+  background-color: gainsboro;
+  padding: 2px 12px;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+.productAlldescription .productInformation {
+  margin-top: 1vh;
+}
+.productAlldescription .productInformation h3 {
+  margin: 0.5vh 0;
+  font-size: 20px;
+}
+.productAlldescription .productInformation P {
+  margin: 1vh 0;
+  font-weight: 300;
+}
+.productAlldescription .productPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+.productAlldescription .productPrice .priceOverline {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.471);
+}
+.productAlldescription .colorPicker {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around center;
+  align-items: center;
+  align-content: center;
+}
+.productAlldescription .productReduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: top;
+  align-content: center;
+  padding: 1.5vh 0;
+  border-top: 1px solid rgb(194, 194, 194);
+}
+.productAlldescription .productReduction small {
+  font-size: 12px;
+  margin: 0 2px;
+}
+.productAlldescription button:hover {
+  background-color: rgba(0, 185, 252, 0.6392156863);
+}
+
+.btnNav h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2vh;
+}
+.btnNav .navMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 10vh 0;
+}
+.btnNav .navMenu__item {
+  color: white;
+  margin: 0 0.5vw;
+  padding: 0.5vh 3vw;
+  background-color: #000;
+  text-decoration: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 300;
+  border: 1px #000 solid;
+  transition: all 0.3s ease-in;
+}
+.btnNav .navMenu__item:not(.btnNav .navMenu__item--active):hover {
+  color: #000;
+  background-color: white;
+  border: 1px #000 solid;
+}
+.btnNav .navMenu__item--active {
+  color: #000;
+  background-color: white;
+  border: 2px #000 solid;
+}
+
+/*# sourceMappingURL=style.css.map */
